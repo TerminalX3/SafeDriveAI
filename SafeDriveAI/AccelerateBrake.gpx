@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="Xcode">
+  <!-- Desk test: stop → accelerate north → cruise → brake. Debug > Simulate Location. -->
+  <wpt lat="37.331820" lon="-122.031180">
+    <name>Stop</name>
+    <time>2026-10-09T18:00:00Z</time>
+  </wpt>
+  <wpt lat="37.331820" lon="-122.031180">
+    <name>Hold</name>
+    <time>2026-10-09T18:00:02Z</time>
+  </wpt>
+  <wpt lat="37.331910" lon="-122.031180">
+    <name>Accel</name>
+    <time>2026-10-09T18:00:04Z</time>
+  </wpt>
+  <wpt lat="37.332050" lon="-122.031180">
+    <name>Accel2</name>
+    <time>2026-10-09T18:00:06Z</time>
+  </wpt>
+  <wpt lat="37.332240" lon="-122.031180">
+    <name>Cruise</name>
+    <time>2026-10-09T18:00:08Z</time>
+  </wpt>
+  <wpt lat="37.332430" lon="-122.031180">
+    <name>Cruise2</name>
+    <time>2026-10-09T18:00:10Z</time>
+  </wpt>
+  <wpt lat="37.332540" lon="-122.031180">
+    <name>Brake</name>
+    <time>2026-10-09T18:00:12Z</time>
+  </wpt>
+  <wpt lat="37.332600" lon="-122.031180">
+    <name>Brake2</name>
+    <time>2026-10-09T18:00:14Z</time>
+  </wpt>
+  <wpt lat="37.332620" lon="-122.031180">
+    <name>Stop2</name>
+    <time>2026-10-09T18:00:16Z</time>
+  </wpt>
+  <wpt lat="37.332620" lon="-122.031180">
+    <name>Hold2</name>
+    <time>2026-10-09T18:00:18Z</time>
+  </wpt>
+</gpx>
