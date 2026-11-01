@@ -4,6 +4,33 @@ SafeDriveAI is an intelligent, AI-powered driving coach that helps new and teena
 
 SafeDriveAI uses GPS location data, the phone’s inbuilt accelerometer, and the OpenStreetMap Overpass API to monitor speed and determine whether the driver is exceeding the road’s speed limit. To identify distracted driving, the app uses iOS’s face tracking system to calculate the yaw, pitch, and roll of the driver’s face. For traffic lights, stop signs, safe following distance, and seatbelt use, it uses two custom-trained YOLO26n (nano) AI models on the front and back cameras. The AI models are run locally on the phone for a streamlined response and quicker feedback. Overall, by combining real-time and hands-free coaching with long-term progress, SafeDriveAI is intended to help new drivers transform ordinary practice drives into opportunities for improvement, and better and safer driving habits.
 
+**Screens**
+```mermaid
+flowchart TD
+    launch[SafeDriveAIApp] --> root[RootView]
+    root -->|first launch| onboard[Onboarding]
+    root -->|already set up| home[Home shell]
+
+    onboard --> welcome[Welcome]
+    welcome --> watches[What the cameras watch]
+    watches --> camera[Camera permission]
+    camera --> location[Location permission]
+    location --> profile[Name, email, age]
+    profile --> ready[Ready]
+    ready --> home
+
+    home --> homeTab[Home: recent drives and Start]
+    home --> reportsTab[Reports: list, map, clips, PDF]
+    home --> profileTab[Profile and practice hours]
+
+    homeTab -->|Start drive| sideways[Turn sideways]
+    sideways -->|landscape| drive[Active drive]
+    sideways -->|cancel| home
+    drive -->|end| upright[Turn upright]
+    upright --> reportsTab
+```
+
+**Code**
 ```mermaid
 graph TB
     subgraph ui [Screens]
@@ -53,3 +80,5 @@ graph TB
     recorder --> score
     recorder --> reportUI
 ```
+
+Courtesy of Sumedh Kota.
